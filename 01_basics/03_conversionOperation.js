@@ -4,12 +4,12 @@ let score = true //undefined -> NaN(not a number)
 //true/false -> 1/0
 
 
-//console.log(typeof score);
-//console.log(typeof (score));
+// console.log(typeof score);
+// console.log(typeof (score));
 
 let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+// console.log(typeof valueInNumber);
+// console.log(valueInNumber);
 
 let isLoggedIn = "Ujjwal"
 
@@ -41,15 +41,15 @@ let negValue = -value
 // console.log(2%3);
 
 let str1 = "Ujjwal"
-let str2 = " Sahu"
+let str2 = " Sahu"     // Space deke Sahu likha hu isiliye concatenate hoga o/p me space ke sath
 let str3 = str1 + str2
 
 // console.log(str3);
 
 // console.log("1" + 2);
 // console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2 + 2);    //Pehla number string toh concatenate hoga age wali values bhi
+// console.log(1 + 2 + "2");    //Pehle do number hai toh operation hoga they act like operand baad wali value string so it concatenate simply
 
 // console.log((3+5)*5%2);
 
