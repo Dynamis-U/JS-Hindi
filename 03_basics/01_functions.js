@@ -8,7 +8,7 @@ function sayMyName(){
 }
 
 //sayMyName => This is for funtion reference 
-//sayMyName => This is forfunction execution
+//sayMyName() => This is for function execution
 
 // sayMyName()
 
