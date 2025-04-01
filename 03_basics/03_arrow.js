@@ -49,6 +49,6 @@ const user = {
 
 // const addTwo = (num1, num2) => (num1 + num2 )
 
-const addTwo = (num1, num2) => ({username: "ujjwal"}) //agar object bhi return karana hai toh paranthesis ke andar denge object 
+const addTwo = (num1, num2) => ({username: "ujjwal"}) //agar object bhi return karana hai toh paranthesis ke andar denge
 
 console.log(addTwo(3,4))
