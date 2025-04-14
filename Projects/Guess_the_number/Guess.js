@@ -1,11 +1,11 @@
-const randomnumber = parseInt(Math.random()*100 + 1);
+let randomnumber = parseInt(Math.random()*100 + 1);
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSLot = document.querySelector('.guesses');
 const  remaining = document.querySelector('.lastresult');
 const lowOrHigh = document.querySelector('.lowOrHigh');
-const startOver = document.querySelector('resultParas');
+const startOver = document.querySelector('.resultParas');
 
 const p = document.createElement('p');
 
@@ -81,7 +81,7 @@ function newGame(){
         newGameButton.addEventListener('click', function(e){
             randomnumber = parseInt(Math.random()*100 + 1);
             prevGuess = [];
-            newGuess = 1;
+            numGuess = 1;
             guessSLot.innerHTML = '';
             remaining.innerHTML = `${11 - numGuess}`;
             userInput.removeAttribute('disabled');
