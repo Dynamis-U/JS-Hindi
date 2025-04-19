@@ -11,11 +11,62 @@
         <ul id="images">
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>    <!--Not good approach when system is scaled-->
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
     </div>
 </body>
+
+<script>
+    // document.getElementById('owl').onclick = function(){       //Not a modern approach
+    //     alert('Owl clicked')
+    // }
+
+    // attachEvent()
+    // jQuery - on
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log(e)
+    // }, false )  //3rd by deafault false
+
+    // // type, timestamp, defaultPrevented
+    // // target, toElement, srcElement, currentTarget
+    // // clientX, clientY, screenX, screenY
+    // // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");                    
+    // }, false ) 
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl clicked");            // if clicked in owl image then first "Owl clicked" printed in browser console then "clicked inside the ul" is printed by bubbling owl concept bubble comes above from inside or below to top or from li owl id to ul images id 
+    //     e.stopPropagation(); // now propagation not go above
+    // }, false ) // PROPAGATION CONCEPT
+    //            // false -> bubbling mode - explained above
+    //            // true -> capturing mode - opposite of bubbling mode goes from top to bottom
+    
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked")
+    // }, false)
+ 
+    //To remove an selected element but it remove whole elements if clicked outside the image because it remove the parent node and if image is clicked its parent node is li so li removed but when clicked outside the image it means you clicked the li or ul so li parent is ul and ul parent is div that get removed
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode;
+    //     removeIt.remove()
+    // })
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+    })
+</script>
 </html>
